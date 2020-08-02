@@ -11,10 +11,14 @@ class TalksController < ApplicationController
 
   def create
     @talk = Talk.new(talk_params)
-    if @talk.save
-      redirect_to talks_path, notice: "Talk created!"
-    else
+    if params[:back]
       render :new
+    else
+      if @talk.save
+        redirect_to talks_path, notice: "Successflly created a talk!"
+      else
+        render :new
+      end
     end
   end
 
@@ -26,7 +30,7 @@ class TalksController < ApplicationController
 
   def update
     if @talk.update(talk_params)
-      redirect_to talks_path, notice: "You edited the talk!"
+      redirect_to talks_path, notice: "Successfully edited the Talk!"
     else
       render :edit
     end
@@ -34,7 +38,12 @@ class TalksController < ApplicationController
 
   def destroy
     @talk.destroy
-    redirect_to talks_path, notice: "You deleted a talk!"
+    redirect_to talks_path, notice: "Successfully deleted a talk!"
+  end
+
+  def confirm
+    @talk = Talk.new(talk_params)
+    render :new if @talk.invalid?
   end
 
   private
