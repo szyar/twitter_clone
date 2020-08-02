@@ -1,0 +1,7 @@
+<%= form_with(model: @talk, local: true) do |form| %>
+  <div class="talk">
+    <%= form.label :talk %>
+    <%= form.text_field :talk %>
+  </div>
+  <%= form.submit %>
+<% end %>
