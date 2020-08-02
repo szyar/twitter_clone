@@ -20,6 +20,19 @@ class TalksController < ApplicationController
     @talk = Talk.find(params[:id])
   end
 
+  def edit
+    @talk = Talk.find(params[:id])
+  end
+
+  def update
+    @talk = Talk.find(params[:id])
+    if @talk.update(talk_params)
+      redirect_to talks_path, notice: "You edited your talk!"
+    else
+      render :edit
+    end
+  end
+
   private
   def talk_params
     params.require(:talk).permit(:talk)

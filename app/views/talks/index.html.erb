@@ -9,6 +9,7 @@
      <td><%= talk.id %></td>
      <td><%= talk.talk %></td>
      <td><%= link_to'Check details', talk_path(talk.id) %></td>
+     <td><%= link_to "Edit talk", edit_talk_path(talk.id) %></td>
    </tr>
 <% end %>
 </table>
