@@ -1,4 +1,14 @@
 <%= form_with(model: @talk, local: true) do |form| %>
+  <% if @talk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @talk.errors.count %> There are errors. </h2>
+      <ul>
+      <% @talk.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="talk">
     <%= form.label :talk %>
     <%= form.text_field :talk %>
