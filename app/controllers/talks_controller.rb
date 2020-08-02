@@ -1,5 +1,5 @@
 class TalksController < ApplicationController
-  before_action :set_talk, only: [:show, :edit, :update]
+  before_action :set_talk, only: [:show, :edit, :update, :destroy]
 
   def index
     @talks = Talk.all
@@ -26,10 +26,15 @@ class TalksController < ApplicationController
 
   def update
     if @talk.update(talk_params)
-      redirect_to talks_path, notice: "You edited your talk!"
+      redirect_to talks_path, notice: "You edited the talk!"
     else
       render :edit
     end
+  end
+
+  def destroy
+    @talk.destroy
+    redirect_to talks_path, notice: "You deleted a talk!"
   end
 
   private

@@ -1,4 +1,5 @@
 <h1>Talk list</h1>
+<p><%= notice %></p>
 <table>
    <tr>
      <th>ID </th>
@@ -8,8 +9,11 @@
    <tr>
      <td><%= talk.id %></td>
      <td><%= talk.talk %></td>
-     <td><%= link_to'Check details', talk_path(talk.id) %></td>
-     <td><%= link_to "Edit talk", edit_talk_path(talk.id) %></td>
+     <td><%= link_to 'Check details', talk_path(talk.id) %></td>
+     <td><%= link_to 'Edit talk', edit_talk_path(talk.id),
+     data: {confirm:'Are you sure you want to edit? '} %></td>
+     <td><%= link_to 'Delete talk', talk_path(talk.id), method: :delete,
+     data: {confirm:'Are you sure you want to delete? '}  %> </td>
    </tr>
 <% end %>
 </table>
