@@ -8,6 +8,7 @@
    <tr>
      <td><%= talk.id %></td>
      <td><%= talk.talk %></td>
+     <td><%= link_to'Check details', talk_path(talk.id) %></td>
    </tr>
 <% end %>
 </table>
