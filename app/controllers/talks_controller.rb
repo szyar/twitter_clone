@@ -1,4 +1,6 @@
 class TalksController < ApplicationController
+  before_action :set_talk, only: [:show, :edit, :update]
+
   def index
     @talks = Talk.all
   end
@@ -17,15 +19,12 @@ class TalksController < ApplicationController
   end
 
   def show
-    @talk = Talk.find(params[:id])
   end
 
   def edit
-    @talk = Talk.find(params[:id])
   end
 
   def update
-    @talk = Talk.find(params[:id])
     if @talk.update(talk_params)
       redirect_to talks_path, notice: "You edited your talk!"
     else
@@ -36,6 +35,10 @@ class TalksController < ApplicationController
   private
   def talk_params
     params.require(:talk).permit(:talk)
+  end
+
+  def set_talk
+    @talk = Talk.find(params[:id])
   end
 
 end
