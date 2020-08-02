@@ -1,24 +1,11 @@
-# README
+# Twitter Clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Rails test
 
-Things you may want to cover:
+<p> run <p>
 
-* Ruby version
+<pre> rails db:create </pre>
 
-* System dependencies
+<pre> rails db:migrate </pre>
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<pre> rails s </pre>
