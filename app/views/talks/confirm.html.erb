@@ -1,7 +1,7 @@
 <h3> Send with the following contents. </h3>
 <%= form_with(model: @talk, url: talks_path, local: true) do |form| %>
 <%= form.hidden_field :talk %>
-<p>Talk: <%= @talk.talk %></p>
+<p id="check_data">Talk: <%= @talk.talk %></p>
 <div class="submit">
     <%= form.submit "register" %>
     <%= form.submit "back", name:'back' %>

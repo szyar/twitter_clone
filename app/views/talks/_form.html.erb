@@ -9,12 +9,14 @@
     </ul>
 </div>
 <% end %>
-<div class="talk">
-    <%= form.label :talk %> <br>
-    <%= form.text_area :talk, autofocus: true %>
-</div>
-<div class="submit">
-    <%= form.submit %>
+<div id="wrapper">
+    <div class="talk">
+        <%= form.label :talk %> <br>
+        <%= form.text_area :talk, autofocus: true %>
+    </div>
+    <div class="submit">
+        <%= form.submit %>
+    </div>
 </div>
 <% end %>
 <div class="btn"><%= link_to'Return to talk list screen', talks_path %></div>

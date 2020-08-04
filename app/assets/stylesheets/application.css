@@ -90,13 +90,17 @@ p.shadow a {
     text-shadow: 1.5px 1px #ccc;
 }
 
+/* #wrapper {
+    text-align: center;
+    justify-content: center;
+} */
+
 .talk * {
-    margin: 0.7rem;
     font-size: 1.4rem;
 }
 
 #talk_talk {
-    margin: 1.5rem;
+    margin-top: 1.5rem;
     height: 6rem;
     width: 21rem;
     padding: 0.7rem;
@@ -112,17 +116,24 @@ p.shadow a {
     display: none;
 }
 
+.action * {
+    color: #dd2c00;
+}
+
+.action *:hover {
+    color: #4b5d67;
+}
+
 .btn {
-    margin: 1.5rem;
+    margin-top: 3rem;
 }
 
 .btn a {
-    width: 10rem;
     text-align: center;
-    padding: 1.1rem;
-    background-color: #2980B9;
+    padding: 1.5rem 5.3rem;
+    background-color: #3691DA;
     color: #FDFEFE;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
 }
@@ -134,18 +145,35 @@ p.shadow a {
 input[type="submit"] {
     margin-top: -1rem;
     margin-bottom: 2rem;
+    margin-right: 2.5rem;
     width: 7rem;
     padding: 1rem 0.5rem;
-    background-color: #2980B9;
+    background-color: #3691DA;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
+}
+
+#wrapper input[type="submit"] {
+    margin-right: 0;
 }
 
 input[type="submit"]:hover {
     color: #154360;
     cursor: pointer;
+}
+
+.submit {
+    width: 21rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#check_data {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 /* Index Page */
@@ -175,17 +203,17 @@ a:hover {
     margin: 1.5rem;
 }
 
-.submit {
-    margin: 1.5rem;
-}
-
 footer {
     box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.51);
     width: 100%;
-    height: 30px;
+    height: 5%;
     position: absolute;
     bottom: 0;
     background-color: #3691DA;
     margin-top: 10px;
     display: table;
+}
+
+footer p {
+    margin: 0.7rem;
 }
