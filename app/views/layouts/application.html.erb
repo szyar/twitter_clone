@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Twitter</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
+    <nav>
+        <ul>
+            <li id="left">
+                <a><%= link_to 'Twitter', talks_path %></a>
+            </li>
+            <li class="right">
+                <a><%= link_to 'New Talk', new_talk_path %></a>
+            </li>
+            <li class="right">
+                <a><%= link_to 'Talk List', talks_path %></a>
+            </li>
+        </ul>
+    </nav>
     <%= yield %>
-  </body>
+
+    <footer>
+        <p>Soe Zayar</p>
+        <p>© 2015-2018 Copyright DIVE INTO CODE Corp.</p>
+    </footer>
+</body>
+
 </html>

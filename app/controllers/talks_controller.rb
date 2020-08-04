@@ -54,5 +54,4 @@ class TalksController < ApplicationController
   def set_talk
     @talk = Talk.find(params[:id])
   end
-
 end
