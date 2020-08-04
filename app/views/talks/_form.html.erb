@@ -1,18 +1,20 @@
 <%= form_with(model: @talk, local: true , url: choose_new_or_edit ) do |form| %>
-  <% if @talk.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= @talk.errors.count %> There are errors. </h2>
-      <ul>
-      <% @talk.errors.full_messages.each do |msg| %>
+<% if @talk.errors.any? %>
+<div id="error_explanation">
+    <h2><%= @talk.errors.count %> There are errors. </h2>
+    <ul>
+        <% @talk.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="talk">
-    <%= form.label :talk %>
-    <%= form.text_field :talk %>
-  </div>
-  <%= form.submit %>
+        <% end %>
+    </ul>
+</div>
 <% end %>
-<%= link_to'Return to talk list screen', talks_path %>
+<div class="talk">
+    <%= form.label :talk %> <br>
+    <%= form.text_area :talk, autofocus: true %>
+</div>
+<div class="submit">
+    <%= form.submit %>
+</div>
+<% end %>
+<div class="btn"><%= link_to'Return to talk list screen', talks_path %></div>

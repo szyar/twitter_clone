@@ -20,13 +20,19 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    background-size: cover;
+    background-image: url(fuji.jpg);
 }
 
 nav {
     margin: 0 auto;
     position: relative;
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.51);
     background-color: #3691DA;
     height: 30px;
     font-size: 1.5rem;
@@ -81,52 +87,100 @@ div#talk_list {
 }
 
 p.shadow a {
-text-shadow: 1.5px 1px #ccc;
+    text-shadow: 1.5px 1px #ccc;
 }
 
-/* New Page */
-body {
-font-family: Arial, Helvetica, sans-serif;
+.talk * {
+    margin: 0.7rem;
+    font-size: 1.4rem;
 }
 
-.blog_title, .blog_content {
-padding: 5px;
-margin-bottom: 10px;
+#talk_talk {
+    margin: 1.5rem;
+    height: 6rem;
+    width: 21rem;
+    padding: 0.7rem;
+    box-sizing: border-box;
+    background-color: #56AEEE;
+    color: black;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#talk_talk::-webkit-scrollbar {
+    display: none;
+}
+
+.btn {
+    margin: 1.5rem;
+}
+
+.btn a {
+    width: 10rem;
+    text-align: center;
+    padding: 1.1rem;
+    background-color: #2980B9;
+    color: #FDFEFE;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn a:hover {
+    color: #154360;
 }
 
 input[type="submit"] {
-padding: 5px;
-background-color: #4e342e;
-color: #fff;
-font-size: 0.9rem;
-border: none;
-border-radius: 5px;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    width: 7rem;
+    padding: 1rem 0.5rem;
+    background-color: #2980B9;
+    color: #fff;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    color: #154360;
+    cursor: pointer;
 }
 
 /* Index Page */
 table.table {
-border-collapse: collapse;
+    border-collapse: collapse;
+    margin: 1.5rem;
 }
 
 table.table, .table th, .table td {
-border: 1px solid black;
+    border: 1px solid black;
 }
 
 th, td {
-padding: 10px 20px;
+    padding: 10px 20px;
 }
 
 a {
-text-decoration: none;
-color: #000;
+    text-decoration: none;
+    color: #000;
 }
 
 a:hover {
-color: #008080;
+    color: #154360;
 }
 
+.talk {
+    margin: 1.5rem;
+}
+
+.submit {
+    margin: 1.5rem;
+}
 
 footer {
+    box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.51);
     width: 100%;
     height: 30px;
     position: absolute;

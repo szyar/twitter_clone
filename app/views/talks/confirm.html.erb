@@ -2,6 +2,8 @@
 <%= form_with(model: @talk, url: talks_path, local: true) do |form| %>
 <%= form.hidden_field :talk %>
 <p>Talk: <%= @talk.talk %></p>
-<%= form.submit "register" %>
-<%= form.submit "back", name:'back' %>
+<div class="submit">
+    <%= form.submit "register" %>
+    <%= form.submit "back", name:'back' %>
+</div>
 <% end %>
