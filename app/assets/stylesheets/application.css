@@ -116,14 +116,6 @@ p.shadow a {
     display: none;
 }
 
-.action * {
-    color: #dd2c00;
-}
-
-.action *:hover {
-    color: #4b5d67;
-}
-
 .btn {
     margin-top: 3rem;
 }
@@ -179,15 +171,29 @@ input[type="submit"]:hover {
 /* Index Page */
 table.table {
     border-collapse: collapse;
+    width: 60%;
     margin: 1.5rem;
 }
 
-table.table, .table th, .table td {
-    border: 1px solid black;
+tr:nth-child(odd) {
+    background-color: #3CA4DC;
 }
 
 th, td {
-    padding: 10px 20px;
+    padding: 15px 20px;
+}
+
+td {
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #6CAEBA;
+}
+
+td.action {
+    text-align: right;
+    width: 12%;
 }
 
 a {
