@@ -1,19 +1,22 @@
 <h1>Talk list</h1>
 <p><%= notice %></p>
-<table>
-    <tr>
-        <th>ID </th>
-        <th>Talks</th>
-    </tr>
-    <% @talks.each do |talk| %>
-    <tr>
-        <td><%= talk.id %></td>
-        <td><%= talk.talk %></td>
-        <td><%= link_to 'Check details', talk_path(talk.id) %></td>
-        <td><%= link_to 'Edit talk', edit_talk_path(talk.id) %></td>
-        <td><%= link_to 'Delete talk', talk_path(talk.id), method: :delete,
+<div id="talk_list">
+    <table class="table">
+        <tr>
+            <th>ID </th>
+            <th>Talks</th>
+            <th colspan=3>Actions</th>
+        </tr>
+        <% @talks.each do |talk| %>
+        <tr>
+            <td><%= talk.id %></td>
+            <td><%= talk.talk %></td>
+            <td><%= link_to 'Check details', talk_path(talk.id) %></td>
+            <td><%= link_to 'Edit talk', edit_talk_path(talk.id) %></td>
+            <td><%= link_to 'Delete talk', talk_path(talk.id), method: :delete,
         data: {confirm:'Are you sure you want to delete? '}  %> </td>
-    </tr>
-    <% end %>
-</table>
+        </tr>
+        <% end %>
+    </table>
+</div>
 <%= link_to'Post new talk ', new_talk_path %>
