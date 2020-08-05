@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Talk List</h1>
 <p><%= notice %></p>
 <div id="talk_list">
@@ -9,12 +10,13 @@
         <% @talks.each do |talk| %>
         <tr>
             <td><%= talk.talk %></td>
-            <td class="action"><%= link_to 'Check details', talk_path(talk.id) %></td>
-            <td class="action"><%= link_to 'Edit talk', edit_talk_path(talk.id) %></td>
-            <td class="action"><%= link_to 'Delete talk', talk_path(talk.id), method: :delete,
+            <td class="action"><%= link_to 'Details', talk_path(talk.id) %></td>
+            <td class="action"><%= link_to 'Edit', edit_talk_path(talk.id) %></td>
+            <td class="action"><%= link_to 'Delete', talk_path(talk.id), method: :delete,
         data: {confirm:'Are you sure you want to delete? '}  %> </td>
         </tr>
         <% end %>
     </table>
 </div>
 <div class="btn"><%= link_to'Post new talk ', new_talk_path %></div>
+</div>
